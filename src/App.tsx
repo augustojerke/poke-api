@@ -15,7 +15,7 @@ function App() {
 
   async function getPokemons() {
     try {
-      const pokemonsList = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=20&offset=0");
+      const pokemonsList = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=1400&offset=0");
       const pokemonsResults = pokemonsList.data.results;
 
       for(let i = 0; i < pokemonsList.data.count; i++){
@@ -47,9 +47,9 @@ function App() {
       </div>
       <div className="grid justify-center items-center grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 px-5 ml-4">
           {pokemons?.map((poke, i) => (
-            <div key={i} className="bg-slate-300 w-56 h-40 mx-2 my-2 border-4 border-slate-400 flex-col justify-center items-center
+            <div key={i} className="bg-slate-300 w-56 h-40 mx-2 my-2 border-4 border-slate-400 fl ex-col justify-center items-center
                                       text-center hover:border-green-700">
-              <img className="mx-auto my-auto" src={poke.mainImage}/>
+              <img className="mx-auto my-auto" src={poke.mainImage} alt={"Imagem " + poke.name} loading="lazy"/>
               <h3 className="text-xl"><b>{poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}</b></h3>
             </div>
           ))}
