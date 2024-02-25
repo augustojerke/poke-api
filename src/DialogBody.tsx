@@ -39,9 +39,12 @@ export default function DialogBody(props: DialogProps){
    return(
       <div>
          <img className=" size-40 mx-auto" src={pokemonInfo.image} alt={"Imagem " + pokemonInfo.image} />
-         <h1>Nome: {pokemonInfo.name}</h1>
-         <h1>Altura: {pokemonInfo.height}</h1>
-         <h1>Peso: {pokemonInfo.weight}</h1>
+         <div>
+            <div>
+               <label>Nome:</label>
+               <p>{pokemonInfo.name}</p>
+            </div>            
+         </div>
       </div>
    )
 }
