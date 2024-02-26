@@ -7,10 +7,8 @@ import {
   Dialog,
   DialogClose,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
 import DialogBody from "./DialogBody"
@@ -87,7 +85,7 @@ function App() {
             <DialogBody id={selectedPokemon}/>
             <DialogFooter className="sm:justify-start">
               <DialogClose asChild>
-                <Button onClick={() => setModal(false)} type="button" variant="secondary">
+                <Button className=" bg-red-800 text-white" onClick={() => setModal(false)} type="button" variant="default">
                   Fechar
                 </Button>
               </DialogClose>

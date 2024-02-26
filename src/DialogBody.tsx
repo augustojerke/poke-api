@@ -41,8 +41,18 @@ export default function DialogBody(props: DialogProps){
          <img className=" size-40 mx-auto" src={pokemonInfo.image} alt={"Imagem " + pokemonInfo.image} />
          <div>
             <div>
-               <label>Nome:</label>
-               <p>{pokemonInfo.name}</p>
+               <div className="flex justify-start items-center gap-1 mt-2">
+                  <label className=" text-black"><b>Nome:</b></label>
+                  <p>{pokemonInfo.name}</p>
+               </div>
+               <div className="flex justify-start items-center gap-1 mt-2">
+                  <label className=" text-black"><b>Peso:</b></label>
+                  <p>{pokemonInfo.weight}</p>
+               </div>
+               <div className="flex justify-start items-center gap-1 mt-2">
+                  <label className=" text-black"><b>Altura: </b></label>
+                  <p>{pokemonInfo.height}</p>
+               </div>
             </div>            
          </div>
       </div>
