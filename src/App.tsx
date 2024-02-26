@@ -62,7 +62,7 @@ function App() {
   return (
     <main className="bg-slate-950">
       <div className="flex justify-start items-center p-10 space-x-4">
-        <Input onChange={(e) => setFiltro(e.target.value)} className="w-80 text-white bg-slate-900 border-slate-800" placeholder="Nome do Pokemon"/>
+        <Input onChange={(e) => setFiltro(e.target.value)} className="w-40 xl:w-80 text-white bg-slate-900 border-slate-800" placeholder="Nome do Pokemon"/>
         <Button onClick={getPokemons} className="bg-slate-50 text-black hover:bg-slate-200">
           <Search className="mr-2" size={18}/>
           Buscar Pokémon
